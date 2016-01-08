@@ -123,7 +123,7 @@ brython(1);
 
 &lt;!-- 以下利用 Brython 程式執行繪圖 --&gt;
 
-&lt;canvas id="plotarea2" width="400" height="410"&gt;&lt;/canvas&gt;
+&lt;canvas id="plotarea2" width="400" height="400"&gt;&lt;/canvas&gt;
 
 &lt;script type="text/python3"&gt;
 # 導入 doc
@@ -132,8 +132,8 @@ from browser import console
 import math
 
 # 準備繪圖畫布
-canvas = doc["plotarea2"]
-ctx2 = canvas.getContext("2d")
+canvas2 = doc["plotarea2"]
+ctx2 = canvas2.getContext("2d")
 
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
