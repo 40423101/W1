@@ -223,7 +223,7 @@ for i in 1 .. 10 { 呼叫特定函式(i) }
 &lt;/ol&gt;
 &lt;/div&gt;</summary><category term="pelican"></category><category term="publishing"></category></entry><entry><title>w14</title><link href="http://coursemdetw.github.io/reveal/w14.html" rel="alternate"></link><updated>2015-12-18T00:00:00+08:00</updated><author><name>coursemdetw</name></author><id>tag:coursemdetw.github.io,2015-12-18:reveal/w14.html</id><summary type="html">&lt;!-- 導入 brython.js --&gt;
 
-&lt;script type="text/javascript" src="js/Brython3.2.3-20151122-082712/brython.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
 
 &lt;!-- 啟動 brython() --&gt;
 
