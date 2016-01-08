@@ -66,9 +66,17 @@ brython(1);
 
 <!-- 以下利用 Brython 程式執行繪圖 -->
 
-<canvas id="plotarea2" width="200" height="200"></canvas>
+<canvas id="plotarea2" width="400" height="410"></canvas>
 
 <script type="text/python3">
+# 導入 doc
+from browser import document as doc
+from browser import console
+import math
+
+# 準備繪圖畫布
+canvas = doc["plotarea2"]
+ctx2 = canvas.getContext("2d")
 
 <!DOCTYPE html>
 <html>
@@ -461,7 +469,7 @@ ctx2.fill();
 
   <section>
   <h1>Tags</h1>
-    <a href="./tag/pelican.html">pelican</a>,    <a href="./tag/publishing.html">publishing</a>  </section>
+    <a href="./tag/publishing.html">publishing</a>,    <a href="./tag/pelican.html">pelican</a>  </section>
 
 
     <section>
