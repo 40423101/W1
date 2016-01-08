@@ -123,7 +123,7 @@ brython(1);
 
 &lt;!-- 以下利用 Brython 程式執行繪圖 --&gt;
 
-&lt;canvas id="plotarea2" width="200" height="200"&gt;&lt;/canvas&gt;
+&lt;canvas id="plotarea2" width="400" height="400"&gt;&lt;/canvas&gt;
 
 &lt;script type="text/python3"&gt;
 # 導入 doc
@@ -460,8 +460,11 @@ ctx2.fill();
 
 &lt;/script&gt;
 
-&lt;p&gt;&lt;/body&gt;
-&lt;/html&gt;&lt;/p&gt;</summary><category term="pelican"></category><category term="publishing"></category></entry><entry><title>w14</title><link href="http://coursemdetw.github.io/reveal/w14.html" rel="alternate"></link><updated>2015-12-18T00:00:00+08:00</updated><author><name>coursemdetw</name></author><id>tag:coursemdetw.github.io,2015-12-18:reveal/w14.html</id><summary type="html">&lt;!-- 導入 brython.js --&gt;
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;</summary><category term="pelican"></category><category term="publishing"></category></entry><entry><title>w14</title><link href="http://coursemdetw.github.io/reveal/w14.html" rel="alternate"></link><updated>2015-12-18T00:00:00+08:00</updated><author><name>coursemdetw</name></author><id>tag:coursemdetw.github.io,2015-12-18:reveal/w14.html</id><summary type="html">&lt;!-- 導入 brython.js --&gt;
 
 &lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
 

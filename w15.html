@@ -66,7 +66,7 @@ brython(1);
 
 <!-- 以下利用 Brython 程式執行繪圖 -->
 
-<canvas id="plotarea2" width="200" height="200"></canvas>
+<canvas id="plotarea2" width="400" height="400"></canvas>
 
 <script type="text/python3">
 # 導入 doc
@@ -403,8 +403,11 @@ ctx2.fill();
 
 </script>
 
-<p></body>
-</html></p></div>
+<script>
+window.onload=function(){
+brython(1);
+}
+</script></div>
     <footer>
 <p class="meta">
   <span class="byline author vcard">
