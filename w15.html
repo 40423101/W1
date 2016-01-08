@@ -76,32 +76,9 @@ import math
 
 # 準備繪圖畫布
 canvas2 = doc["plotarea2"]
-ctx2 = canvas2.getContext("2d")
-
-# 開始畫直線
-for i in range(11):
-    ctx2.beginPath()
-    ctx2.lineWidth = 5
-    ctx2.moveTo(0,0+i*20 )
-    ctx2.lineTo(200,0+i*20 )
-    ctx2.strokeStyle = "#0000ff"
-    ctx2.stroke()
-for i in range(11):
-    ctx2.beginPath()
-    ctx2.lineWidth = 5
-    ctx2.moveTo(0+i*20, 0)
-    ctx2.lineTo(0+i*20, 200)
-    ctx2.strokeStyle = "#FF0000"
-    ctx2.stroke()
+ctx22 = canvas2.getContext("2d")
 
 
-</script>
-
-<script>
-window.onload=function(){
-brython(1);
-}
-</script>
 
 <!DOCTYPE html>
 <html>
@@ -114,327 +91,327 @@ Your browser does not support the canvas element.
 
 <script>
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.fillStyle = "#9F5000";
-ctx.fillRect(180,307.5,40,80);
+var ctx2 = canvas.getContext("2d");
+ctx2.fillStyle = "#9F5000";
+ctx2.fillRect(180,307.5,40,80);
 
-ctx.beginPath();
-ctx.lineWidth=5
-ctx.strokeStyle = "#9AFF02";
-ctx.moveTo(200,70);
-ctx.lineTo(100,150);
-ctx.stroke();
+ctx2.beginPath();
+ctx2.lineWidth=5
+ctx2.strokeStyle = "#9AFF02";
+ctx2.moveTo(200,70);
+ctx2.lineTo(100,150);
+ctx2.stroke();
 
-ctx.beginPath();
-ctx.moveTo(200,70);
-ctx.lineTo(300,150);
-ctx.stroke();
+ctx2.beginPath();
+ctx2.moveTo(200,70);
+ctx2.lineTo(300,150);
+ctx2.stroke();
 
-ctx.beginPath();
-ctx.moveTo(100,150);
-ctx.lineTo(300,150);
-ctx.stroke();
+ctx2.beginPath();
+ctx2.moveTo(100,150);
+ctx2.lineTo(300,150);
+ctx2.stroke();
 
-ctx.beginPath();
-ctx.moveTo(160,150);
-ctx.lineTo(80,230);
-ctx.stroke();
+ctx2.beginPath();
+ctx2.moveTo(160,150);
+ctx2.lineTo(80,230);
+ctx2.stroke();
 
-ctx.beginPath();
-ctx.moveTo(240,150);
-ctx.lineTo(320,230);
-ctx.stroke();
+ctx2.beginPath();
+ctx2.moveTo(240,150);
+ctx2.lineTo(320,230);
+ctx2.stroke();
 
-ctx.beginPath();
-ctx.moveTo(80,230);
-ctx.lineTo(320,230);
-ctx.stroke();
+ctx2.beginPath();
+ctx2.moveTo(80,230);
+ctx2.lineTo(320,230);
+ctx2.stroke();
 
-ctx.beginPath();
-ctx.moveTo(140,230);
-ctx.lineTo(60,310);
-ctx.stroke();
+ctx2.beginPath();
+ctx2.moveTo(140,230);
+ctx2.lineTo(60,310);
+ctx2.stroke();
 
-ctx.beginPath();
-ctx.moveTo(260,230);
-ctx.lineTo(340,310);
-ctx.stroke();
+ctx2.beginPath();
+ctx2.moveTo(260,230);
+ctx2.lineTo(340,310);
+ctx2.stroke();
 
-ctx.beginPath();
-ctx.moveTo(60,310);
-ctx.lineTo(340,310);
-ctx.stroke();
+ctx2.beginPath();
+ctx2.moveTo(60,310);
+ctx2.lineTo(340,310);
+ctx2.stroke();
 
-ctx.beginPath();
-ctx.lineWidth=6
-ctx.strokeStyle = "#FFFF37";
-ctx.moveTo(200,10);
-ctx.lineTo(180,30);
-ctx.stroke();
+ctx2.beginPath();
+ctx2.lineWidth=6
+ctx2.strokeStyle = "#FFFF37";
+ctx2.moveTo(200,10);
+ctx2.lineTo(180,30);
+ctx2.stroke();
 
-ctx.beginPath();
-ctx.moveTo(200,10);
-ctx.lineTo(220,30);
-ctx.stroke();
+ctx2.beginPath();
+ctx2.moveTo(200,10);
+ctx2.lineTo(220,30);
+ctx2.stroke();
 
-ctx.beginPath();
-ctx.moveTo(180,30);
-ctx.lineTo(160,30);
-ctx.stroke();
+ctx2.beginPath();
+ctx2.moveTo(180,30);
+ctx2.lineTo(160,30);
+ctx2.stroke();
 
-ctx.beginPath();
-ctx.moveTo(220,30);
-ctx.lineTo(240,30);
-ctx.stroke();
+ctx2.beginPath();
+ctx2.moveTo(220,30);
+ctx2.lineTo(240,30);
+ctx2.stroke();
 
-ctx.beginPath();
-ctx.moveTo(160,30);
-ctx.lineTo(180,50);
-ctx.stroke();
+ctx2.beginPath();
+ctx2.moveTo(160,30);
+ctx2.lineTo(180,50);
+ctx2.stroke();
 
-ctx.beginPath();
-ctx.moveTo(180,50);
-ctx.lineTo(170,70);
-ctx.stroke();
+ctx2.beginPath();
+ctx2.moveTo(180,50);
+ctx2.lineTo(170,70);
+ctx2.stroke();
 
-ctx.beginPath();
-ctx.moveTo(170,70);
-ctx.lineTo(200,50);
-ctx.stroke();
+ctx2.beginPath();
+ctx2.moveTo(170,70);
+ctx2.lineTo(200,50);
+ctx2.stroke();
 
-ctx.beginPath();
-ctx.moveTo(200,50);
-ctx.lineTo(230,70);
-ctx.stroke();
+ctx2.beginPath();
+ctx2.moveTo(200,50);
+ctx2.lineTo(230,70);
+ctx2.stroke();
 
-ctx.beginPath();
-ctx.moveTo(230,70);
-ctx.lineTo(220,50);
-ctx.stroke();
+ctx2.beginPath();
+ctx2.moveTo(230,70);
+ctx2.lineTo(220,50);
+ctx2.stroke();
 
-ctx.beginPath();
-ctx.moveTo(220,50);
-ctx.lineTo(240,30);
-ctx.stroke();
+ctx2.beginPath();
+ctx2.moveTo(220,50);
+ctx2.lineTo(240,30);
+ctx2.stroke();
 
-ctx.beginPath();
-ctx.lineWidth=4
-ctx.strokeStyle = "#FF0000";
-ctx.moveTo(200,70);
-ctx.lineTo(200,50);
-ctx.stroke();
+ctx2.beginPath();
+ctx2.lineWidth=4
+ctx2.strokeStyle = "#FF0000";
+ctx2.moveTo(200,70);
+ctx2.lineTo(200,50);
+ctx2.stroke();
 
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.fillStyle = "#009100";
-ctx.fillRect(140,350,120,30);
+var ctx2 = canvas.getContext("2d");
+ctx2.fillStyle = "#009100";
+ctx2.fillRect(140,350,120,30);
 
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.fillStyle = "#009100";
-ctx.fillRect(170,370,60,30);
+var ctx2 = canvas.getContext("2d");
+ctx2.fillStyle = "#009100";
+ctx2.fillRect(170,370,60,30);
 
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.moveTo(0,0);
-ctx.strokeStyle = "#FFBFFF";
-ctx.lineTo(400,0);
-ctx.lineWidth=5
-ctx.stroke();
+var ctx2 = canvas.getContext("2d");
+ctx2.moveTo(0,0);
+ctx2.strokeStyle = "#FFBFFF";
+ctx2.lineTo(400,0);
+ctx2.lineWidth=5
+ctx2.stroke();
 
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.moveTo(0,0);
-ctx.strokeStyle = "#FFBFFF";
-ctx.lineTo(0,400);
-ctx.lineWidth=5
-ctx.stroke();
+var ctx2 = canvas.getContext("2d");
+ctx2.moveTo(0,0);
+ctx2.strokeStyle = "#FFBFFF";
+ctx2.lineTo(0,400);
+ctx2.lineWidth=5
+ctx2.stroke();
 
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.moveTo(400,400);
-ctx.strokeStyle = "#FFBFFF";
-ctx.lineTo(400,0);
-ctx.lineWidth=5
-ctx.stroke();
+var ctx2 = canvas.getContext("2d");
+ctx2.moveTo(400,400);
+ctx2.strokeStyle = "#FFBFFF";
+ctx2.lineTo(400,0);
+ctx2.lineWidth=5
+ctx2.stroke();
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.moveTo(400,400);
-ctx.strokeStyle = "#FFBFFF";
-ctx.lineTo(0,400);
-ctx.lineWidth=5
-ctx.stroke();
+var ctx2 = canvas.getContext("2d");
+ctx2.moveTo(400,400);
+ctx2.strokeStyle = "#FFBFFF";
+ctx2.lineTo(0,400);
+ctx2.lineWidth=5
+ctx2.stroke();
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.beginPath();
-ctx.arc(52.5,345,10,0,2*Math.PI);
-ctx.fillStyle = "#FF0000";
-ctx.fill();
+var ctx2 = canvas.getContext("2d");
+ctx2.beginPath();
+ctx2.arc(52.5,345,10,0,2*Math.PI);
+ctx2.fillStyle = "#FF0000";
+ctx2.fill();
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.beginPath();
-ctx.arc(52.5,375,20,0,2*Math.PI);
-ctx.fillStyle = "#FF0000";
-ctx.fill();
+var ctx2 = canvas.getContext("2d");
+ctx2.beginPath();
+ctx2.arc(52.5,375,20,0,2*Math.PI);
+ctx2.fillStyle = "#FF0000";
+ctx2.fill();
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.fillStyle = "#d3a4ff";
-ctx.fillRect(45.35,353,12,4);
+var ctx2 = canvas.getContext("2d");
+ctx2.fillStyle = "#d3a4ff";
+ctx2.fillRect(45.35,353,12,4);
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.fillStyle = "#d3a4ff";
-ctx.fillRect(56,353,4,12);
+var ctx2 = canvas.getContext("2d");
+ctx2.fillStyle = "#d3a4ff";
+ctx2.fillRect(56,353,4,12);
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.beginPath();
-ctx.arc(575,350,180,0,2*Math.PI);
-ctx.fillStyle = "#d3a4ff";
-ctx.fill();
+var ctx2 = canvas.getContext("2d");
+ctx2.beginPath();
+ctx2.arc(575,350,180,0,2*Math.PI);
+ctx2.fillStyle = "#d3a4ff";
+ctx2.fill();
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.beginPath();
-ctx.arc(575,250,180,0,2*Math.PI);
-ctx.fillStyle = "#d3a4ff";
-ctx.fill();
+var ctx2 = canvas.getContext("2d");
+ctx2.beginPath();
+ctx2.arc(575,250,180,0,2*Math.PI);
+ctx2.fillStyle = "#d3a4ff";
+ctx2.fill();
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.beginPath();
-ctx.arc(575,150,180,0,2*Math.PI);
-ctx.fillStyle = "#d3a4ff";
-ctx.fill();
+var ctx2 = canvas.getContext("2d");
+ctx2.beginPath();
+ctx2.arc(575,150,180,0,2*Math.PI);
+ctx2.fillStyle = "#d3a4ff";
+ctx2.fill();
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.beginPath();
-ctx.arc(575,50,180,0,2*Math.PI);
-ctx.fillStyle = "#d3a4ff";
-ctx.fill();
+var ctx2 = canvas.getContext("2d");
+ctx2.beginPath();
+ctx2.arc(575,50,180,0,2*Math.PI);
+ctx2.fillStyle = "#d3a4ff";
+ctx2.fill();
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.beginPath();
-ctx.arc(50,575,180,0,2*Math.PI);
-ctx.fillStyle = "#d3a4ff";
-ctx.fill();
+var ctx2 = canvas.getContext("2d");
+ctx2.beginPath();
+ctx2.arc(50,575,180,0,2*Math.PI);
+ctx2.fillStyle = "#d3a4ff";
+ctx2.fill();
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.beginPath();
-ctx.arc(150,575,180,0,2*Math.PI);
-ctx.fillStyle = "#d3a4ff";
-ctx.fill();
+var ctx2 = canvas.getContext("2d");
+ctx2.beginPath();
+ctx2.arc(150,575,180,0,2*Math.PI);
+ctx2.fillStyle = "#d3a4ff";
+ctx2.fill();
 
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.beginPath();
-ctx.arc(250,575,180,0,2*Math.PI);
-ctx.fillStyle = "#d3a4ff";
-ctx.fill();
+var ctx2 = canvas.getContext("2d");
+ctx2.beginPath();
+ctx2.arc(250,575,180,0,2*Math.PI);
+ctx2.fillStyle = "#d3a4ff";
+ctx2.fill();
 
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.beginPath();
-ctx.arc(350,575,180,0,2*Math.PI);
-ctx.fillStyle = "#d3a4ff";
-ctx.fill();
+var ctx2 = canvas.getContext("2d");
+ctx2.beginPath();
+ctx2.arc(350,575,180,0,2*Math.PI);
+ctx2.fillStyle = "#d3a4ff";
+ctx2.fill();
 
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.beginPath();
-ctx.arc(-175,50,180,0,2*Math.PI);
-ctx.fillStyle = "#d3a4ff";
-ctx.fill();
+var ctx2 = canvas.getContext("2d");
+ctx2.beginPath();
+ctx2.arc(-175,50,180,0,2*Math.PI);
+ctx2.fillStyle = "#d3a4ff";
+ctx2.fill();
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.beginPath();
-ctx.arc(-175,150,180,0,2*Math.PI);
-ctx.fillStyle = "#d3a4ff";
-ctx.fill();
+var ctx2 = canvas.getContext("2d");
+ctx2.beginPath();
+ctx2.arc(-175,150,180,0,2*Math.PI);
+ctx2.fillStyle = "#d3a4ff";
+ctx2.fill();
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.beginPath();
-ctx.arc(-175,250,180,0,2*Math.PI);
-ctx.fillStyle = "#d3a4ff";
-ctx.fill();
+var ctx2 = canvas.getContext("2d");
+ctx2.beginPath();
+ctx2.arc(-175,250,180,0,2*Math.PI);
+ctx2.fillStyle = "#d3a4ff";
+ctx2.fill();
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.beginPath();
-ctx.arc(-175,350,180,0,2*Math.PI);
-ctx.fillStyle = "#d3a4ff";
-ctx.fill();
+var ctx2 = canvas.getContext("2d");
+ctx2.beginPath();
+ctx2.arc(-175,350,180,0,2*Math.PI);
+ctx2.fillStyle = "#d3a4ff";
+ctx2.fill();
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.beginPath();
-ctx.arc(50,-175,180,0,2*Math.PI);
-ctx.fillStyle = "#d3a4ff";
-ctx.fill();
+var ctx2 = canvas.getContext("2d");
+ctx2.beginPath();
+ctx2.arc(50,-175,180,0,2*Math.PI);
+ctx2.fillStyle = "#d3a4ff";
+ctx2.fill();
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.beginPath();
-ctx.arc(150,-175,180,0,2*Math.PI);
-ctx.fillStyle = "#d3a4ff";
-ctx.fill();
+var ctx2 = canvas.getContext("2d");
+ctx2.beginPath();
+ctx2.arc(150,-175,180,0,2*Math.PI);
+ctx2.fillStyle = "#d3a4ff";
+ctx2.fill();
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.beginPath();
-ctx.arc(250,-175,180,0,2*Math.PI);
-ctx.fillStyle = "#d3a4ff";
-ctx.fill();
+var ctx2 = canvas.getContext("2d");
+ctx2.beginPath();
+ctx2.arc(250,-175,180,0,2*Math.PI);
+ctx2.fillStyle = "#d3a4ff";
+ctx2.fill();
 
-ctx.beginPath();
+ctx2.beginPath();
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.beginPath();
-ctx.arc(350,-175,180,0,2*Math.PI);
-ctx.fillStyle = "#d3a4ff";
-ctx.fill();
+var ctx2 = canvas.getContext("2d");
+ctx2.beginPath();
+ctx2.arc(350,-175,180,0,2*Math.PI);
+ctx2.fillStyle = "#d3a4ff";
+ctx2.fill();
 
 
 </script>
