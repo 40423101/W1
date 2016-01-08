@@ -66,6 +66,20 @@ brython(1);
 
 <!-- 以下利用 Brython 程式執行繪圖 -->
 
+<canvas id="plotarea2" width="200" height="200"></canvas>
+
+<script type="text/python3">
+# 導入 doc
+from browser import document as doc
+from browser import console
+import math
+
+# 準備繪圖畫布
+canvas2 = doc["plotarea2"]
+ctx2 = canvas2.getContext("2d")
+
+
+
 <!DOCTYPE html>
 <html>
 <body>
