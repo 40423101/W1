@@ -109,119 +109,395 @@ def on_canvas_click(ev):
 
 # 只要使用者點擊在畫布上任何地方, 即執行 on_canvas_click 函式
 canvas.bind('click', on_canvas_click, False)
-&lt;/script&gt;</summary><category term="pelican"></category><category term="publishing"></category></entry><entry><title>w15</title><link href="http://coursemdetw.github.io/reveal/w15.html" rel="alternate"></link><updated>2015-12-25T00:00:00+08:00</updated><author><name>coursemdetw</name></author><id>tag:coursemdetw.github.io,2015-12-25:reveal/w15.html</id><summary type="html">&lt;p&gt;以下為作業一內容&lt;/p&gt;
-&lt;p&gt;利用 iframe 嵌入投影片:&lt;/p&gt;
-&lt;iframe src="40423101_cp_w1_p.html" width="500" height="300"&gt;&lt;/iframe&gt;
+&lt;/script&gt;</summary><category term="pelican"></category><category term="publishing"></category></entry><entry><title>w15</title><link href="http://coursemdetw.github.io/reveal/w15.html" rel="alternate"></link><updated>2015-12-25T00:00:00+08:00</updated><author><name>coursemdetw</name></author><id>tag:coursemdetw.github.io,2015-12-25:reveal/w15.html</id><summary type="html">&lt;!-- 導入 brython.js --&gt;
 
-&lt;p&gt;&lt;a href="40423101_cp_w1_p.html" target="_blank"&gt;作業一投影片&lt;/a&gt;&lt;/p&gt;
-&lt;h1&gt;使用 H1 標題&lt;/h1&gt;
-&lt;p&gt;文字段落間若要跳行, 必須插入空白行, 否則將會被 Markdown 視為連續的資料&lt;/p&gt;
-&lt;p&gt;使用. &lt;em&gt;斜體文字&lt;/em&gt;, &lt;strong&gt;黑體文字&lt;/strong&gt;, 以及 &lt;code&gt;單線文字&lt;/code&gt;. 表列資料可以寫為:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;第1項說明&lt;/li&gt;
-&lt;li&gt;第2項說明&lt;/li&gt;
-&lt;li&gt;第3項說明&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;特別注意 --- 不包括星號 --- 表列文字從第四欄位開始.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;引用的內容寫在這裡
-主要是以大於的符號開頭.&lt;/p&gt;
-&lt;p&gt;其中也可以利用空白行隔開,
-整區都是引用內容的範圍.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;em-dash 符號是3個 dashes. 利用兩個 dashes 來連接開始與結束 (ex., "這個禮拜要閱讀章節 12--14"). 3個逗點 ... 則會被轉為 ellipsis.
-pelican 可以支援 unicode. ☺&lt;/p&gt;
-&lt;h2&gt;H2 標題&lt;/h2&gt;
-&lt;p&gt;有數字的表列資料:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;第1項&lt;/li&gt;
-&lt;li&gt;第2項&lt;/li&gt;
-&lt;li&gt;第3項&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;跟前面一樣, 文字從第四個欄位開始.&lt;/p&gt;
-&lt;p&gt;程式碼的表達:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;# for 重複迴圈 ...
-for i in 1 .. 10 { 呼叫特定函式(i) }
-&lt;/pre&gt;&lt;/div&gt;
+&lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
 
+&lt;!-- 啟動 brython() --&gt;
 
-&lt;p&gt;這裡也是要空4個 space 鍵. &lt;/p&gt;
-&lt;p&gt;除了每一行空4個空白, 也可以使用 delimited 來界定程式碼範圍, 就像這樣:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;define foobar() {
-    print(&amp;quot;歡迎進入程式的世界!&amp;quot;)
+&lt;script&gt;
+window.onload=function(){
+brython(1);
 }
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/script&gt;
+
+&lt;!-- 以下利用 Brython 程式執行繪圖 --&gt;
+
+&lt;canvas id="plotarea2" width="200" height="200"&gt;&lt;/canvas&gt;
+
+&lt;script type="text/python3"&gt;
+# 導入 doc
+from browser import document as doc
+from browser import console
+import math
+
+# 準備繪圖畫布
+canvas2 = doc["plotarea2"]
+ctx2 = canvas2.getContext("2d")
+
+# 開始畫直線
+for i in range(11):
+    ctx2.beginPath()
+    ctx2.lineWidth = 5
+    ctx2.moveTo(0,0+i*20 )
+    ctx2.lineTo(200,0+i*20 )
+    ctx2.strokeStyle = "#0000ff"
+    ctx2.stroke()
+for i in range(11):
+    ctx2.beginPath()
+    ctx2.lineWidth = 5
+    ctx2.moveTo(0+i*20, 0)
+    ctx2.lineTo(0+i*20, 200)
+    ctx2.strokeStyle = "#FF0000"
+    ctx2.stroke()
 
 
-&lt;p&gt;(這樣的表達比較容易用來複製程式碼內容).&lt;/p&gt;
-&lt;p&gt;python 的程式碼, 可以寫成下列格式&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
-&lt;span class="c"&gt;# 以下會從 0 數到 9&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="c"&gt;# 稍微暫停一下&lt;/span&gt;
-    &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/script&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;canvas id="myCanvas" width="400" height="400"
+style="border:1px solid #c3c3c3;"&gt;
+Your browser does not support the canvas element.
+&lt;/canvas&gt;
+
+&lt;script&gt;
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "#9F5000";
+ctx.fillRect(180,307.5,40,80);
+
+ctx.beginPath();
+ctx.lineWidth=5
+ctx.strokeStyle = "#9AFF02";
+ctx.moveTo(200,70);
+ctx.lineTo(100,150);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(200,70);
+ctx.lineTo(300,150);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(100,150);
+ctx.lineTo(300,150);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(160,150);
+ctx.lineTo(80,230);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(240,150);
+ctx.lineTo(320,230);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(80,230);
+ctx.lineTo(320,230);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(140,230);
+ctx.lineTo(60,310);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(260,230);
+ctx.lineTo(340,310);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(60,310);
+ctx.lineTo(340,310);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.lineWidth=6
+ctx.strokeStyle = "#FFFF37";
+ctx.moveTo(200,10);
+ctx.lineTo(180,30);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(200,10);
+ctx.lineTo(220,30);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(180,30);
+ctx.lineTo(160,30);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(220,30);
+ctx.lineTo(240,30);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(160,30);
+ctx.lineTo(180,50);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(180,50);
+ctx.lineTo(170,70);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(170,70);
+ctx.lineTo(200,50);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(200,50);
+ctx.lineTo(230,70);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(230,70);
+ctx.lineTo(220,50);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(220,50);
+ctx.lineTo(240,30);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.lineWidth=4
+ctx.strokeStyle = "#FF0000";
+ctx.moveTo(200,70);
+ctx.lineTo(200,50);
+ctx.stroke();
 
 
-&lt;p&gt;以下為另外一種嵌入程式碼的方法:&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3
-4
-5
-6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
-&lt;span class="c"&gt;# 以下會從 0 數到 9&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="c"&gt;# 稍微暫停一下&lt;/span&gt;
-    &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;h3&gt;H3 標題&lt;/h3&gt;
-&lt;p&gt;以下則為內嵌式的表列法t:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;首先, 將完成下列元件的設計:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;轉向機構&lt;/li&gt;
-&lt;li&gt;煞車系統&lt;/li&gt;
-&lt;li&gt;踩踏機構&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;接著連繫工業設計部門.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;確定上述元件的各項設計與用料都符合原始設計規格的要求
-    查驗表:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;各元件材質
-車蓋顏色
-機構調校流程
-需要熱處理的元件列表
-&lt;/pre&gt;&lt;/div&gt;
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "#009100";
+ctx.fillRect(140,350,120,30);
 
 
-&lt;p&gt;完成上述查驗後, 請通知品保部門, 以便接續處理.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;特別注意各階資料都以內縮4個空白鍵來加以區隔, 包含最後一行.&lt;/p&gt;
-&lt;p&gt;Markdown 的超文件連結寫法 &lt;a href="http://www.google.com" target="_blank"&gt;連到 Google&lt;/a&gt;, 也可以連到同目錄下的檔案 &lt;a href="cadpbw1.html" target="_blank"&gt;cadpbw1.html&lt;/a&gt;, 也能使用註腳 &lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;p&gt;放入圖檔, 可以直接利用 html 的 img 標註:&lt;/p&gt;
-&lt;p&gt;&lt;img src="images/spur.png" width="500" alt="正齒輪繪圖"&gt;&lt;/img&gt;&lt;/p&gt;
-&lt;p&gt;Vimeo 影片嵌入(直接從 Vimeo 影片上的 Share 複製 html 碼):&lt;/p&gt;
-&lt;iframe src="https://player.vimeo.com/video/137724068" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "#009100";
+ctx.fillRect(170,370,60,30);
 
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/137724068"&gt;Welcome Speech&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程系 KMOL&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;div class="footnote"&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id="fn:1"&gt;
-&lt;p&gt;註腳會連結到這裡.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;</summary><category term="pelican"></category><category term="publishing"></category></entry><entry><title>w14</title><link href="http://coursemdetw.github.io/reveal/w14.html" rel="alternate"></link><updated>2015-12-18T00:00:00+08:00</updated><author><name>coursemdetw</name></author><id>tag:coursemdetw.github.io,2015-12-18:reveal/w14.html</id><summary type="html">&lt;!-- 導入 brython.js --&gt;
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.moveTo(0,0);
+ctx.strokeStyle = "#FFBFFF";
+ctx.lineTo(400,0);
+ctx.lineWidth=5
+ctx.stroke();
+
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.moveTo(0,0);
+ctx.strokeStyle = "#FFBFFF";
+ctx.lineTo(0,400);
+ctx.lineWidth=5
+ctx.stroke();
+
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.moveTo(400,400);
+ctx.strokeStyle = "#FFBFFF";
+ctx.lineTo(400,0);
+ctx.lineWidth=5
+ctx.stroke();
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.moveTo(400,400);
+ctx.strokeStyle = "#FFBFFF";
+ctx.lineTo(0,400);
+ctx.lineWidth=5
+ctx.stroke();
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(52.5,345,10,0,2*Math.PI);
+ctx.fillStyle = "#FF0000";
+ctx.fill();
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(52.5,375,20,0,2*Math.PI);
+ctx.fillStyle = "#FF0000";
+ctx.fill();
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "#d3a4ff";
+ctx.fillRect(45.35,353,12,4);
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "#d3a4ff";
+ctx.fillRect(56,353,4,12);
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(575,350,180,0,2*Math.PI);
+ctx.fillStyle = "#d3a4ff";
+ctx.fill();
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(575,250,180,0,2*Math.PI);
+ctx.fillStyle = "#d3a4ff";
+ctx.fill();
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(575,150,180,0,2*Math.PI);
+ctx.fillStyle = "#d3a4ff";
+ctx.fill();
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(575,50,180,0,2*Math.PI);
+ctx.fillStyle = "#d3a4ff";
+ctx.fill();
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(50,575,180,0,2*Math.PI);
+ctx.fillStyle = "#d3a4ff";
+ctx.fill();
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(150,575,180,0,2*Math.PI);
+ctx.fillStyle = "#d3a4ff";
+ctx.fill();
+
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(250,575,180,0,2*Math.PI);
+ctx.fillStyle = "#d3a4ff";
+ctx.fill();
+
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(350,575,180,0,2*Math.PI);
+ctx.fillStyle = "#d3a4ff";
+ctx.fill();
+
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(-175,50,180,0,2*Math.PI);
+ctx.fillStyle = "#d3a4ff";
+ctx.fill();
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(-175,150,180,0,2*Math.PI);
+ctx.fillStyle = "#d3a4ff";
+ctx.fill();
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(-175,250,180,0,2*Math.PI);
+ctx.fillStyle = "#d3a4ff";
+ctx.fill();
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(-175,350,180,0,2*Math.PI);
+ctx.fillStyle = "#d3a4ff";
+ctx.fill();
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(50,-175,180,0,2*Math.PI);
+ctx.fillStyle = "#d3a4ff";
+ctx.fill();
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(150,-175,180,0,2*Math.PI);
+ctx.fillStyle = "#d3a4ff";
+ctx.fill();
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(250,-175,180,0,2*Math.PI);
+ctx.fillStyle = "#d3a4ff";
+ctx.fill();
+
+ctx.beginPath();
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(350,-175,180,0,2*Math.PI);
+ctx.fillStyle = "#d3a4ff";
+ctx.fill();
+
+
+&lt;/script&gt;
+
+&lt;p&gt;&lt;/body&gt;
+&lt;/html&gt;&lt;/p&gt;</summary><category term="pelican"></category><category term="publishing"></category></entry><entry><title>w14</title><link href="http://coursemdetw.github.io/reveal/w14.html" rel="alternate"></link><updated>2015-12-18T00:00:00+08:00</updated><author><name>coursemdetw</name></author><id>tag:coursemdetw.github.io,2015-12-18:reveal/w14.html</id><summary type="html">&lt;!-- 導入 brython.js --&gt;
 
 &lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
 
