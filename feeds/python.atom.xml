@@ -126,16 +126,6 @@ brython(1);
 &lt;canvas id="plotarea2" width="200" height="200"&gt;&lt;/canvas&gt;
 
 &lt;script type="text/python3"&gt;
-# 導入 doc
-from browser import document as doc
-from browser import console
-import math
-
-# 準備繪圖畫布
-canvas2 = doc["plotarea2"]
-ctx22 = canvas2.getContext("2d")
-
-
 
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
