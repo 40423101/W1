@@ -123,7 +123,7 @@ brython(1);
 
 &lt;!-- 以下利用 Brython 程式執行繪圖 --&gt;
 
-&lt;canvas id="plotarea2" width="400" height="400"&gt;&lt;/canvas&gt;
+&lt;canvas id="plotarea2" width="0" height="0"&gt;&lt;/canvas&gt;
 
 &lt;script type="text/python3"&gt;
 # 導入 doc
@@ -133,9 +133,18 @@ import math
 
 # 準備繪圖畫布
 canvas2 = doc["plotarea2"]
-ctx2 = canvas2.getContext("2d")
+ctx22 = canvas2.getContext("2d")
 
 
+
+
+&lt;/script&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
 
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -475,7 +484,7 @@ brython(1);
 
 &lt;!-- 以下利用 Brython 程式執行繪圖 --&gt;
 
-&lt;canvas id="plotarea" width="200" height="200"&gt;&lt;/canvas&gt;
+&lt;canvas id="plotarea3" width="200" height="200"&gt;&lt;/canvas&gt;
 
 &lt;script type="text/python3"&gt;
 # 導入 doc
@@ -484,24 +493,24 @@ from browser import console
 import math
 
 # 準備繪圖畫布
-canvas = doc["plotarea"]
-ctx = canvas.getContext("2d")
+canvas3 = doc["plotarea3"]
+ctx3 = canvas3.getContext("2d")
 
 # 開始畫直線
 for i in range(11):
-    ctx.beginPath()
-    ctx.lineWidth = 5
-    ctx.moveTo(0,0+i*20 )
-    ctx.lineTo(200,0+i*20 )
-    ctx.strokeStyle = "#0000ff"
-    ctx.stroke()
+    ctx3.beginPath()
+    ctx3.lineWidth = 5
+    ctx3.moveTo(0,0+i*20 )
+    ctx3.lineTo(200,0+i*20 )
+    ctx3.strokeStyle = "#0000ff"
+    ctx3.stroke()
 for i in range(11):
-    ctx.beginPath()
-    ctx.lineWidth = 5
-    ctx.moveTo(0+i*20, 0)
-    ctx.lineTo(0+i*20, 200)
-    ctx.strokeStyle = "#FF0000"
-    ctx.stroke()
+    ctx3.beginPath()
+    ctx3.lineWidth = 5
+    ctx3.moveTo(0+i*20, 0)
+    ctx3.lineTo(0+i*20, 200)
+    ctx3.strokeStyle = "#FF0000"
+    ctx3.stroke()
 
 
 &lt;/script&gt;
