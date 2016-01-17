@@ -33,7 +33,7 @@ ctx = canvas.getContext("2d")
 width = canvas.width
 height = canvas.height
 
-n = 30
+n = 20
 # 已知數列內容個數, 先分別與 None 對應
 x = [None]*n
 y = [None]*n
@@ -46,7 +46,7 @@ cor = 0.7
 # 球的彈力係數
 fr = 0.95
 # 球的半徑
-r = 2
+r = 7
 
 for i in range(n):
     x[i] = 300
@@ -95,7 +95,7 @@ def animate():
     # 刷新畫布
     ctx.clearRect(0, 0, width, height)
     # 逐一重新繪製小球
-    ctx.fillStyle = "#000000"
+    ctx.fillStyle = "#0000C6"
     for i in range(n):
         updateY(i)
         updateX(i)
