@@ -479,7 +479,16 @@ ctx2.fill();
 &lt;/script&gt;
 
 &lt;p&gt;&lt;/body&gt;
-&lt;/html&gt;&lt;/p&gt;</summary><category term="pelican"></category><category term="publishing"></category></entry><entry><title>w14</title><link href="http://coursemdetw.github.io/reveal/w14.html" rel="alternate"></link><updated>2015-12-18T00:00:00+08:00</updated><author><name>coursemdetw</name></author><id>tag:coursemdetw.github.io,2015-12-18:reveal/w14.html</id><summary type="html">&lt;!-- 導入 brython.js --&gt;
+&lt;/html&gt;&lt;/p&gt;
+&lt;p&gt;心得&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;這週的作業是做聖誕樹&lt;/p&gt;
+&lt;p&gt;聖誕樹真的不好做&lt;/p&gt;
+&lt;p&gt;要自己設計圖&lt;/p&gt;
+&lt;p&gt;設定完座標後還要一個指令一個指令慢慢打&lt;/p&gt;
+&lt;p&gt;座標如果定錯了&lt;/p&gt;
+&lt;p&gt;線就會跑錯地方&lt;/p&gt;
+&lt;p&gt;但設計出跟別人不一樣的東西就會特別有成就感&lt;/p&gt;</summary><category term="pelican"></category><category term="publishing"></category></entry><entry><title>w14</title><link href="http://coursemdetw.github.io/reveal/w14.html" rel="alternate"></link><updated>2015-12-18T00:00:00+08:00</updated><author><name>coursemdetw</name></author><id>tag:coursemdetw.github.io,2015-12-18:reveal/w14.html</id><summary type="html">&lt;!-- 導入 brython.js --&gt;
 
 &lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
 
